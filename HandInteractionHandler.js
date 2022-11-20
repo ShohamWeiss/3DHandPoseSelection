@@ -44,4 +44,6 @@ function SelectButton(position)
             button.click();
         }
     }
+
+    
 }
