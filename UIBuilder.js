@@ -56,7 +56,7 @@ function CreateButtons(optionsNavigator){
     // set the button text
     backButton.innerHTML = "Back";
     // set button size
-    backButton.style.width = "200px";
+    backButton.style.width = "100px";
     backButton.style.height = "100px";
     backButton.addEventListener ("click", function() {
         optionsNavigator.Back();
@@ -75,7 +75,7 @@ function CreateButtons(optionsNavigator){
         // set the button text
         button.innerHTML = key;
         // set button size
-        button.style.width = "200px";
+        button.style.width = "100px";
         button.style.height = "100px";
         button.addEventListener ("click", function() {
             // Navigate to the button text
@@ -98,7 +98,7 @@ function CreateButtons(optionsNavigator){
     // set the button text
     speakButton.innerHTML = "Speak";
     // set button size
-    speakButton.style.width = "200px";
+    speakButton.style.width = "100px";
     speakButton.style.height = "100px";
     speakButton.addEventListener ("click", function() {
         // get sentece button
@@ -118,19 +118,19 @@ function CreateButtons(optionsNavigator){
     // set the button text
     clearButton.innerHTML = "Clear";
     // set button size
-    clearButton.style.width = "200px";
+    clearButton.style.width = "100px";
     clearButton.style.height = "100px";
     clearButton.addEventListener ("click", function() {
         // get sentece button
         var sentenceButton = document.getElementById("sentence");
         // get the text from the sentence button
         var sentence = sentenceButton.innerHTML;
-        // speak the current directory
+        // clear the current directory
         sentenceButton.innerHTML = "";
         }
     );
     document.getElementById("parentOptionsContainer").appendChild(clearButton);
-  }
+}
 // function to get a point in a semi-circle
 function getPointInCircle(center, radius, angle){
 // convert angle to radians
@@ -139,7 +139,7 @@ return {
     x: center.x + radius * Math.cos(angle) - buttonWidth/2,
     y: center.y + radius * Math.sin(angle) - buttonHeight/2
 };
-}
+} 
 // function to speak a sentence
 function speak(sentence){
     // create a new SpeechSynthesisUtterance object
