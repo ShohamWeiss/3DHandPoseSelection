@@ -49,22 +49,22 @@ function CreateButtons(optionsNavigator){
       document.getElementById("optionsContainer").appendChild(button);
     }
 
-    // create back button
-    var backButton = document.createElement("button");
-    // set class to btn
-    backButton.className = "btn btn-secondary mx-5";
-    // set the button text
-    backButton.innerHTML = "Back";
-    // set button size
-    backButton.style.width = "200px";
-    backButton.style.height = "100px";
-    backButton.addEventListener ("click", function() {
-        optionsNavigator.Back();
-        document.getElementById("optionsContainer").innerHTML = "";
-        document.getElementById("parentOptionsContainer").innerHTML = "";
-        CreateButtons(optionsNavigator);
-    });    
-    document.getElementById("parentOptionsContainer").appendChild(backButton);
+    // // create back button
+    // var backButton = document.createElement("button");
+    // // set class to btn
+    // backButton.className = "btn btn-secondary mx-5";
+    // // set the button text
+    // backButton.innerHTML = "Back";
+    // // set button size
+    // backButton.style.width = "200px";
+    // backButton.style.height = "100px";
+    // backButton.addEventListener ("click", function() {
+    //     optionsNavigator.Back();
+    //     document.getElementById("optionsContainer").innerHTML = "";
+    //     document.getElementById("parentOptionsContainer").innerHTML = "";
+    //     CreateButtons(optionsNavigator);
+    // });    
+    // document.getElementById("parentOptionsContainer").appendChild(backButton);
 
     // for each parent option add a button to parentOptionsContainer
     for (key in optionsNavigator.ParentOptions()){
@@ -91,45 +91,45 @@ function CreateButtons(optionsNavigator){
         document.getElementById("parentOptionsContainer").appendChild(button);
     }
     
-    // create speak button
-    var speakButton = document.createElement("button");
-    // set class to btn
-    speakButton.className = "btn btn-success mx-5";
-    // set the button text
-    speakButton.innerHTML = "Speak";
-    // set button size
-    speakButton.style.width = "200px";
-    speakButton.style.height = "100px";
-    speakButton.addEventListener ("click", function() {
-        // get sentece button
-        var sentenceButton = document.getElementById("sentence");
-        // get the text from the sentence button
-        var sentence = sentenceButton.innerHTML;
-        // speak the current directory
-        speak(sentence);
-        }
-    );
-    document.getElementById("parentOptionsContainer").appendChild(speakButton);
+    // // create speak button
+    // var speakButton = document.createElement("button");
+    // // set class to btn
+    // speakButton.className = "btn btn-success mx-5";
+    // // set the button text
+    // speakButton.innerHTML = "Speak";
+    // // set button size
+    // speakButton.style.width = "200px";
+    // speakButton.style.height = "100px";
+    // speakButton.addEventListener ("click", function() {
+    //     // get sentece button
+    //     var sentenceButton = document.getElementById("sentence");
+    //     // get the text from the sentence button
+    //     var sentence = sentenceButton.innerHTML;
+    //     // speak the current directory
+    //     Speak(sentence);
+    //     }
+    // );
+    // document.getElementById("parentOptionsContainer").appendChild(speakButton);
 
-    // create clear button
-    var clearButton = document.createElement("button");
-    // set class to btn
-    clearButton.className = "btn btn-danger mx-5";
-    // set the button text
-    clearButton.innerHTML = "Clear";
-    // set button size
-    clearButton.style.width = "200px";
-    clearButton.style.height = "100px";
-    clearButton.addEventListener ("click", function() {
-        // get sentece button
-        var sentenceButton = document.getElementById("sentence");
-        // get the text from the sentence button
-        var sentence = sentenceButton.innerHTML;
-        // speak the current directory
-        sentenceButton.innerHTML = "";
-        }
-    );
-    document.getElementById("parentOptionsContainer").appendChild(clearButton);
+    // // create clear button
+    // var clearButton = document.createElement("button");
+    // // set class to btn
+    // clearButton.className = "btn btn-danger mx-5";
+    // // set the button text
+    // clearButton.innerHTML = "Clear";
+    // // set button size
+    // clearButton.style.width = "200px";
+    // clearButton.style.height = "100px";
+    // clearButton.addEventListener ("click", function() {
+    //     // get sentece button
+    //     var sentenceButton = document.getElementById("sentence");
+    //     // get the text from the sentence button
+    //     var sentence = sentenceButton.innerHTML;
+    //     // speak the current directory
+    //     sentenceButton.innerHTML = "";
+    //     }
+    // );
+    // document.getElementById("parentOptionsContainer").appendChild(clearButton);
   }
 // function to get a point in a semi-circle
 function getPointInCircle(center, radius, angle){
@@ -141,7 +141,7 @@ return {
 };
 }
 // function to speak a sentence
-function speak(sentence){
+function Speak(sentence){
     // create a new SpeechSynthesisUtterance object
     var utterance = new SpeechSynthesisUtterance(sentence);
     // set the voice to the first voice in the voices array
