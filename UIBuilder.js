@@ -141,7 +141,7 @@ return {
 };
 } 
 // function to speak a sentence
-function speak(sentence){
+function Speak(sentence){
     // create a new SpeechSynthesisUtterance object
     var utterance = new SpeechSynthesisUtterance(sentence);
     // set the voice to the first voice in the voices array
